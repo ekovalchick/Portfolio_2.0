@@ -1,32 +1,17 @@
-/* lava code start */
-.blobb {
-  fill: url(#lavaGradient);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-
-.glow {
-  filter: url(#glowing);
+body{
+    background:#633654;
 }
-
-.metasvg {
-  position: fixed;
-  height: 110vh;
-  width: 110vw;
-  top: -20px;
-  left: -20px;
-  overflow: hidden;
+canvas{
+    display: block;
+    /* make sure W&H is properly calc. (no scrll bars wil/fit screen) */
+    
+    background:#633654;
+    filter: blur(10px) contrast(20px);
+    /* creates a liquid behavior for the metaballs */
+    
 }
-
-.metaballs {
-  position: fixed;
-  z-index: -1;
-
-  overflow: hidden;
-}
-
-:root {
-  background: #000;
-  background-color: #6754ce;
-}
-
-
-/* lava code end */
