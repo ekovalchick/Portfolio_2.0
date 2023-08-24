@@ -14,10 +14,15 @@ class Ball{
         this.x = this.effect.width * 0.5;
         this.y = this.effect.height * 0.5;
         // x & ymakes the starting point in the middle of page
-        this.radius = Math.random() * 90 + 20;
+        this.radius = Math.random() * 80 + 20;
         this.speedX = Math.random() - 0.5;
         this.speedY = Math.random() - 0.5;
         //speed positive = right movement(x) positive direction (y)
+        // this.angle = 0;
+        // this.va = Math.random() * 0.1 -0.05;
+        // //all will have a start angle of 0 then a velocity to increase angle value
+        // this.range = Math.random() *20;
+
 
 
     }
@@ -25,9 +30,14 @@ class Ball{
         //make the metaBalls bounce
         if (this.x < this.radius || this.x > this.effect.width - this.radius) this.speedX *= -1;
         if (this.y < this.radius || this.y > this.effect.height - this.radius) this.speedY *= -1;
+        
+        // this.angle += this.va;
 
-        this.x += this.speedX
-        this.y += this.speedY
+        this.x += this.speedX 
+        // * Math.cos(this.angle) * this.range
+        //this will map a position of metaballs of a cos movement
+        this.y += this.speedY 
+        // * Math.cos(this.angle) * this.range
         //makes the balls move 
     }
     draw(context){
@@ -109,3 +119,17 @@ window.addEventListener('resize', function(){
     //^so will keep the metaballs when moving webpage size
     effect.reset(canvas.width, canvas.height)
 })
+
+//navbar 
+
+window.onscroll = function () {scrollFunction();};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+
+document.getElementById("navbar").style.background = "#501e27";
+} else {
+
+document.getElementById("navbar").style.background = "none";
+}
+}
