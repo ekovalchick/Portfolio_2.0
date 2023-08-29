@@ -1,51 +1,79 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Meta Balls </title>
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="./assets/style.css">
 
-    <div class ="navbar">
-      <a href="#" class="logo">Logoo</a>
-      <ul class="nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#demo">Demo</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    
-  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Meta Balls </title>
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="./assets/style.css">
+
+  <div class="navbar" id="navbarz">
+    <a href="#" class="logo">Logoo</a>
+    <ul class="nav">
+      <li id="home"><a>Home</a></li>
+      <li id="about"><a>About</a></li>
+      <li id="portfolio"><a>Portfolio</a></li>
+      <li id="demo"><a>Demo</a></li>
+      <li id="contact"><a>Contact</a></li>
+    </ul>
+  </div>
+
+
 
 </head>
+
 <body>
-  <div>
-    <img src="./assets/images/matt-howard-pCoXyXyroCk-unsplash.jpg" alt="profile photo border" class="prof-border-center">  
-    <img src="./assets/images/IMG_2194.jpg" alt="profile photo" class="prof-center">  
+  <div id="home-pic">
+    <img src="./assets/images/matt-howard-pCoXyXyroCk-unsplash.jpg" alt="profile photo border"
+      class="prof-border-center">
+    <img src="./assets/images/IMG_2194.jpg" alt="profile photo" class="prof-center">
   </div>
-  
+
 
   <section>
- 
-  <canvas id="canvas1"></canvas>
+
+    <canvas id="canvas1"></canvas>
   </section>
 
-  <div class="info">
+  <div id="home-info-id" class="info">
     <a class="home-name">Elizabeth Kovalchick</a>
-      <ul class="home-info">
-        <li><a href="#">Email</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="https://www.linkedin.com/in/elizabeth-kovalchick-3b9956162/">Resume</a></li>
+    <ul class="home-info">
+      <li><a href="#">Email</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="https://www.linkedin.com/in/elizabeth-kovalchick-3b9956162/">Resume</a></li>
 
   </div>
+  <!-- carousel  -->
 
-  
+
+  <div class="carousel-wrapper">
+    <!-- ^size carousel and hide any overflow content  -->
+    <div class="carousel">
+      <!-- ^holds all of elements (images & nav buttons) -->
+      <img class="carousel__photo initial"
+      src="./assets/project_Images/Cosmic_Jamz.png">
+      <img class="carousel__photo" src="./assets/project_Images/password_gen.png">
+      <img class="carousel__photo" src="./assets/project_Images/ReadMe Gen.png">
+      <img class="carousel__photo" src="./assets/project_Images/weather _app.png">
+      <img class="carousel__photo" src="./assets/project_Images/work_day_schedule.png">
+
+      <!-- carousel_photo used for styling -->
+        
+      <div class="carousel__button--next"></div>
+      <div class="carousel__button--prev"></div>
+    </div>
+  </div>
+
+
+  <!-- carousel end -->
+ 
+
 
   <script src="./assets/script.js"></script>
-    
+  <script src="./assets/script_carousel.js"></script>
+
 </body>
+
 </html>

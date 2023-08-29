@@ -1,4 +1,26 @@
+var homeEl = document.getElementById("home");
+var aboutEl = document.querySelector('#about');
+var portfolioEl = document.getElementById("portfolio");
+var demoEl = document.getElementById("demo"); 
+var contactEl = document.getElementById("contact");
+var picEl = document.querySelector("#home-pic");
+var homeInfoEl = document.querySelector("#home-info-id");
+
+
+//nav bar hide functions
+
+function goAbout() {
+    picEl.classList.add("hide");
+    homeInfoEl.classList.add("hide");
+    // carosel.classList.remove("hide");
+    console.log("goAbout initiated")
+}
+
+aboutEl.addEventListener("click", goAbout)
+
+
 const canvas = document.getElementById('canvas1');
+
 
 const ctx= canvas.getContext("2d");
 canvas.width = window.innerWidth;
@@ -120,16 +142,5 @@ window.addEventListener('resize', function(){
     effect.reset(canvas.width, canvas.height)
 })
 
-//navbar 
 
-// window.onscroll = function () {scrollFunction();};
 
-// function scrollFunction() {
-// if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-
-// document.getElementById("navbar").style.background = "#501e27";
-// } else {
-
-// document.getElementById("navbar").style.background = "none";
-// }
-// }
