@@ -1,24 +1,3 @@
-var homeEl = document.getElementById("home");
-var aboutEl = document.querySelector('#about');
-var portfolioEl = document.getElementById("portfolio");
-var demoEl = document.getElementById("demo"); 
-var contactEl = document.getElementById("contact");
-var picEl = document.querySelector("#home-pic");
-var homeInfoEl = document.querySelector("#home-info-id");
-
-
-//nav bar hide functions
-
-function goAbout() {
-    picEl.classList.add("hide");
-    homeInfoEl.classList.add("hide");
-    // carosel.classList.remove("hide");
-    console.log("goAbout initiated")
-}
-
-aboutEl.addEventListener("click", goAbout)
-
-
 const canvas = document.getElementById('canvas1');
 
 
@@ -37,8 +16,8 @@ class Ball{
         this.y = this.effect.height * 0.5;
         // x & ymakes the starting point in the middle of page
         this.radius = Math.random() * 80 + 20;
-        this.speedX = Math.random() - 0.5;
-        this.speedY = Math.random() - 0.5;
+        this.speedX = Math.random() - 0.1;
+        this.speedY = Math.random() - 0.1;
         //speed positive = right movement(x) positive direction (y)
         // this.angle = 0;
         // this.va = Math.random() * 0.1 -0.05;
@@ -141,6 +120,3 @@ window.addEventListener('resize', function(){
     //^so will keep the metaballs when moving webpage size
     effect.reset(canvas.width, canvas.height)
 })
-
-
-
